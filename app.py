@@ -18,13 +18,9 @@ NAME = "Usama Muzamil"
 DESCRIPTION = """
 Python Developer, assisting enterprises by supporting data-driven decision-making.
 """
-EMAIL = "usamamuzammil54@gmail.com"
-SOCIAL_MEDIA = {
-    "YouTube": "https://youtube.com",
-    "LinkedIn": "https://linkedin.com",
-    "GitHub": "https://github.com",
-    "Twitter": "https://twitter.com",
-}
+CONTACT = "03124092925"
+Email = "usamamuzamil@tplmaps.com"
+
 
 
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
@@ -39,77 +35,44 @@ profile_pic = Image.open(profile_pic)
 
 
 # --- HERO SECTION ---
-col1, col2 = st.columns(2, gap="small")
-with col1:
-    st.image(profile_pic, width=230)
 
-with col2:
+col1, col2 = st.columns(2, gap="medium")
+with col1:
+    st.image(profile_pic, width=336,)
     st.title(NAME)
     st.write(DESCRIPTION)
-    st.download_button(
-        label=" 📄 Download Resume",
-        data=PDFbyte,
-        file_name=resume_file.name,
-        mime="application/octet-stream",
-    )
-    st.write("📫", EMAIL)
+    st.write('\n')
+    #h1 = st.markdown("<h style='text-align: center'>Profile</h>", unsafe_allow_html=True)
+    st.header("Profile")
+    st.write(
+    """Strong hands on experience and knowledge in Python and Knowledge about different softwares such as Pycharm, Jupytor etc""")
+    st.header("Contact")
+    st.write(CONTACT)
+    st.write(Email)
+    st.header("Skills")
+    st.subheader("FRONT END")
+    progress_value = 50 / 100  # Set the progress value to 50
+    st.progress(progress_value)
+# Skill 2
+    st.subheader("BACK END")
+    progress_value_2 = 80 / 100  # Set the progress value to 50
+    st.progress(progress_value_2)
+# Skill 3
+    st.subheader("WRITING")
+    progress_value_2 = 80 / 100  # Set the progress value to 50
+    st.progress(progress_value_2)
 
 
-# --- SOCIAL LINKS ---
-st.write('\n')
-cols = st.columns(len(SOCIAL_MEDIA))
-for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
-    cols[index].write(f"[{platform}]({link})")
-
-
-# --- Objective ---
-st.write('\n')
-st.subheader("Objective")
-st.write(
-    """
-- ✔️ Seeking a challenging position in a reputed organization where I can learn new skills, expand my knowledge, and leverage
-my learnings
-"""
-)
-
-
-# --- EXPERIENCE & QUALIFICATIONS ---
-st.write('\n')
-st.subheader("Experience &  Knowledge")
-st.write(
-    """
-- ✔️ Expereince in extracting actionable insights from data
-- ✔️ Strong hands on experience and knowledge in Python and Excel
-- ✔️ Good understanding of Database & MySql
-- ✔️ Knowledge about different softwares such as Pycharm, Jupytor etc
-- ✔️ Excellent team-player and displaying strong sense of initiative on tasks
-"""
-)
-
-
-# --- SKILLS ---
-st.write('\n')
-st.subheader("Hard Skills")
-st.write(
-    """
-- 👩‍💻 Programming: Python (Scikit-learn, Pandas), SQL, VBA
-- 📊 Data Visulization: PowerBi, MS Excel, Plotly
-- 📚 Modeling: Logistic regression, linear regression, decition trees
-- 🗄️ Databases: Postgres, MongoDB, MySQL
-"""
-)
-
-
-# --- WORK HISTORY ---
-st.write('\n')
-st.subheader("Work History")
-st.write("---")
+with col2:
+ st.write('\n')
+ st.subheader("Work History")
+ st.write("---")
 
 # --- JOB 1
-st.write("🚧", "**Python Developer | Tpl Maps**")
-st.write("08/2021 - Present")
-st.write(
-    """
+ st.write("🚧", "**Python Developer | Tpl Maps**")
+ st.write("08/2021 - Present")
+ st.write(
+"""
 - ► Queried MYSQL database queries from Python using Python-MYSQL Connector and MYSQL DB
 package to retrieve information
 - ► Basic understanding of machine learning, algorithms, supervised and un-supervised learning
@@ -120,10 +83,10 @@ package to retrieve information
 )
 
 # --- JOB 2
-st.write('\n')
-st.write("🚧", "**Customer Executive | Ufone**")
-st.write("03/2020 - 09/2021")
-st.write(
+ st.write('\n')
+ st.write("🚧", "**Customer Executive | Ufone**")
+ st.write("03/2020 - 09/2021")
+ st.write(
     """
 - ► Resolving a wide range of product and service issues speedily and satisfactorily
 - ► Maintaining composure while handling challenging customer demands
@@ -136,9 +99,9 @@ with high first contact resolution rates
 
 
 # --- Education ---
-st.write('\n')
-st.subheader("Education ")
-st.write(
+ st.write('\n')
+ st.subheader("Education ")
+ st.write(
     """
 - ► Bachelors in Information Technology- 2020(University Of The Punjab) 
 """

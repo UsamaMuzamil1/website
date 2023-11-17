@@ -3,7 +3,13 @@
 
 * {font-family: 'Readex Pro';}
 
+body {
+  col1 = background-color: black;
+}
 
+div[data-testid="stHorizontalBlock"] > div:first-of-type {
+  background-color: black;
+}
 a {
     text-decoration: none;
     color: white !important;
